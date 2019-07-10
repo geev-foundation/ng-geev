@@ -1,0 +1,52 @@
+{
+  "name": "ng-geev",
+  "version": "4.0.0",
+  "description": "Angular module for geev based projects",
+  "main": "dist/bundles/ng-geev.umd.js",
+  "module": "dist/index.js",
+  "scripts": {
+    "ngc": "ngc",
+    "cleanup": "rimraf dist/bundles dist/src dist/index.d.ts dist/index.metadata.json dist/index.js dist/index.js.map dist/LICENSE dist/README.md",
+    "bundling": "rollup -c",
+    "minify": "uglifyjs dist/bundles/geev-ng2-module.umd.js --screw-ie8 --compress --mangle --comments --output dist/bundles/geev-ng2-module.umd.min.js",
+    "copy": "copyfiles LICENSE README.md dist",
+    "build": "npm run cleanup && npm run ngc && npm run bundling && npm run minify && npm run copy",
+    "publish-to-npm": "cd dist && npm publish"
+  },
+  "keywords": [
+    "angular",
+    "angular2",
+    "typescript"
+  ],
+  "author": {
+    "name": "SaeedSalehi",
+    "email": "saeedsalehi@yahoo.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/geev-foundation/ng-geev"
+  },
+  "bugs": {
+    "url": "https://github.com/geev-foundation/ng-geev/issues"
+  },
+  "peerDependencies": {
+    "@angular/core": "^8.0.0",
+    "@angular/common": "^8.0.0",
+    "geev-assets": "^3.8.5"
+  },
+  "devDependencies": {
+    "@angular/core": "^8.0.0",
+    "@angular/common": "^8.0.0",
+    "geev-assets": "^3.8.5",
+    "@angular/compiler": "^8.0.0",
+    "@angular/compiler-cli": "^8.0.0",
+    "copyfiles": "^2.1.0",
+    "rimraf": "^2.6.2",
+    "rollup": "^0.68.1",
+    "typescript": "3.4.5",
+    "uglify-js": "^3.4.9",
+    "rxjs": "^6.5.2",
+    "zone.js": "^0.9.1"
+  }
+}
