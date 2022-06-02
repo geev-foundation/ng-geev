@@ -31,12 +31,12 @@
     "url": "https://github.com/geev-foundation/ng-geev/issues"
   },
   "peerDependencies": {
-    "@angular/core": "^7.1.4",
+    "@angular/core": "^11.0.5",
     "@angular/common": "^7.1.4",
     "geev-assets": "^3.8.5"
   },
   "devDependencies": {
-    "@angular/core": "^7.1.4",
+    "@angular/core": "^11.0.5",
     "@angular/common": "^7.1.4",
     "geev-assets": "^3.8.5",
     "@angular/compiler": "^7.1.4",
